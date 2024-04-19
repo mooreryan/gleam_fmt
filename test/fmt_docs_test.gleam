@@ -5,6 +5,17 @@ import gleam/list
 import gleam/string
 import gleeunit/should
 
+pub fn readme_test() {
+  fmt.lit("Movie: ")
+  |> fmt.cat(fmt.string())
+  |> fmt.cat(fmt.lit("; Rating: "))
+  |> fmt.cat(fmt.int())
+  |> fmt.cat(fmt.lit("; Price: $"))
+  |> fmt.cat(fmt.float())
+  |> fmt.sprintf3("Inside Out", 5, 24.99)
+  |> should.equal("Movie: Inside Out; Rating: 5; Price: $24.99")
+}
+
 pub fn lit_test() {
   fmt.lit("Hello, Gleam!")
   |> fmt.sprintf

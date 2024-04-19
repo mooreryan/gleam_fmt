@@ -4,7 +4,7 @@ Type-safe (string) formatting for Gleam.
 
 Heavily inspired by ["Type-safe functional formatted IO"](https://okmij.org/ftp/typed-formatting/index.html) by Oleg Kiselyov.
 
-## Example Usage
+## Usage
 
 The following code would print out `Movie: Inside Out; Rating: 5; Price: $24.99`:
 
@@ -12,7 +12,7 @@ The following code would print out `Movie: Inside Out; Rating: 5; Price: $24.99`
 import fmt
 import gleam/io
 
-// This will print out "Movie: Inside Out; Rating: 5; Price: 13.99"
+// This will print out "Movie: Inside Out; Rating: 5; Price: $24.99"
 pub fn main() {
   fmt.lit("Movie: ")
   |> fmt.cat(fmt.string())
@@ -24,6 +24,19 @@ pub fn main() {
   |> io.println
 }
 ```
+
+In this example, 
+
+- `lit` is used to specify literal string values.
+- `string` is used to specify a `String` placeholder.
+- `int` is used to specify an `Int` placeholder.
+- `float` is used to specify a `Float` placeholder.
+- `cat` is used to concatenate the formatting specifications.
+- `sprintf3` is used to generate the string from the given specification.
+
+For more details and examples, see the documentation and the tests.
+
+### Type Safety
 
 It is **type-safe**: the compiler will ensure that you have set everything up correctly, both in terms of the number of expected arguments and their types.
 
@@ -57,10 +70,12 @@ Found type:
     String
 ```
 
-Further examples can be found in the documentation and in the `test` directory.
+## License
 
-## Development
+[![license MIT or Apache
+2.0](https://img.shields.io/badge/license-MIT%20or%20Apache%202.0-blue)](https://github.com/mooreryan/gleam_qcheck)
 
-```sh
-gleam test  # Run the tests
-```
+Copyright (c) 2024 Ryan M. Moore
+
+Licensed under the Apache License, Version 2.0 or the MIT license, at your option. This program may not be copied, modified, or distributed except according to those terms.
+

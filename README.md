@@ -57,7 +57,7 @@ Found type:
     String
 ```
 
-Further examples can be found in the `test` directory.
+Further examples can be found in the documentation and in the `test` directory.
 
 ## Development
 

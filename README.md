@@ -1,5 +1,8 @@
 # fmt
 
+[![Package Version](https://img.shields.io/hexpm/v/fmt)](https://hex.pm/packages/fmt)
+[![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/fmt/)
+
 Type-safe (string) formatting for Gleam.
 
 Heavily inspired by ["Type-safe functional formatted IO"](https://okmij.org/ftp/typed-formatting/index.html) by Oleg Kiselyov.

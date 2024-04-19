@@ -73,6 +73,10 @@ Found type:
     String
 ```
 
+## See also
+
+- [Glormat](https://github.com/SaphiraKai/glormat): provides a readable style of format strings
+
 ## License
 
 [![license MIT or Apache

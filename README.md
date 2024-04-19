@@ -75,7 +75,42 @@ Found type:
 
 ## See also
 
-- [Glormat](https://github.com/SaphiraKai/glormat): provides a readable style of format strings
+There are a couple other Gleam formatting libraries that I am aware of.  You may be interested in them as well!
+
+*Note: The following example code blocks are taken from the respective project READMEs.*
+
+### Glormat
+
+[Glormat](https://github.com/SaphiraKai/glormat) provides a readable style of format strings, and a pipeline-based API.
+
+```gleam
+import gleam/io
+import glormat.{assert_ok, replace, then, then_debug}
+
+pub fn main() {
+  "hello {object}, the {operation} is {result}"
+    |> replace("object", with: "world")
+    |> then("operation", with: "sum")
+    |> then_debug("result", with: 1 + 2)
+    |> assert_ok
+    |> io.println // hello world, the sum is 3
+}
+```
+
+### Sprinkle
+
+[Sprinkle](https://github.com/LilyRose2798/sprinkle) uses readable format strings and uses string tuples to specify replacements.
+
+```gleam
+import sprinkle.{format}
+
+pub fn main() {
+  let output = format("My name is {name} and I like to do {activity}!", [
+    #("name", "Lily"),
+    #("activity", "programming")
+  ])
+}
+```
 
 ## License
 

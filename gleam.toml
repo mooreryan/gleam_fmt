@@ -1,5 +1,5 @@
 name = "fmt"
-version = "0.0.1"
+version = "0.1.0"
 
 description = "Type-safe (string) formatting for Gleam"
 licences = ["Apache-2.0", "MIT"]
